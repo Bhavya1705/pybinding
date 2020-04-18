@@ -76,7 +76,6 @@ def despine(trim=False):
         ax.yaxis.set_major_locator(plt.MaxNLocator(nbins="auto", steps=[1, 2, 5, 10]))
 
         for v, side in [('x', 'bottom'), ('y', 'left')]:
-            ax.spines[side].set_smart_bounds(True)
             ticks = getattr(ax, "get_{}ticks".format(v))()
             vmin, vmax = getattr(ax, "get_{}lim".format(v))()
             ticks = ticks[(ticks >= vmin) & (ticks <= vmax)]
@@ -105,7 +104,6 @@ def respine():
     ax = plt.gca()
     for side in ['top', 'right', 'bottom', 'left']:
         ax.spines[side].set_visible(True)
-        ax.spines[side].set_smart_bounds(False)
     ax.xaxis.set_ticks_position('both')
     ax.yaxis.set_ticks_position('both')
 
