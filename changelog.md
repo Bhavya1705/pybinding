@@ -5,6 +5,7 @@
 * Fixed installation errors due to the encoding of the `changelog.md` file 
   ([#7](https://github.com/dean0x7d/pybinding/issues/7)).
 
+* Fixed compatibility issues with Python 3.7 and 3.8 (notably, a deadlock on macOS).
 
 ## v0.9.4 | 2017-07-13
 
